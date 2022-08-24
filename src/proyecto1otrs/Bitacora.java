@@ -2,9 +2,27 @@ package proyecto1otrs;
 
 public class Bitacora {
 
+    private int idTicket;
     private String nitSoporte;
-    private int fechaHora;
+    private String fechaHora;
     private String mensajeBitacora;
-    enum tipoEvento {CREAR_TICKET, ASIGNAR_TICKET, MOVER_TICKET, SOLUCION_TICKET}
 
+    private TipoEvento tipoEvento;
+    public Bitacora(String nitSoporte, String fechaHora, String mensajeBitacora, TipoEvento tipoEvento) {
+        this.nitSoporte = nitSoporte;
+        this.fechaHora = fechaHora;
+        this.mensajeBitacora = mensajeBitacora;
+        this.tipoEvento = tipoEvento;
+    }
+
+    @Override
+    public String toString() {
+        return "Bitacora{" +
+                "idTicket=" + idTicket +
+                ", nitSoporte='" + nitSoporte + '\'' +
+                ", fechaHora='" + fechaHora + '\'' +
+                ", mensajeBitacora='" + mensajeBitacora + '\'' +
+                ", tipoEvento=" + tipoEvento +
+                '}';
+    }
 }
